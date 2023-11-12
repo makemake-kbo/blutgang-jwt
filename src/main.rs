@@ -1,15 +1,18 @@
-use jsonwebtoken::{decode, encode, DecodingKey, EncodingKey, Header, Validation};
-use serde::{Deserialize, Serialize};
-use serde_json::Value;
+pub mod sign;
+mod types;
 
-#[derive(Debug, Serialize, Deserialize)]
-struct Claims {
-    id: Value,
-    jsonrpc: Value,
-    method: Value,
-    params: Value,
-    exp: usize,
-}
+use crate::types::Claims;
+
+use jsonwebtoken::{
+    decode,
+    encode,
+    DecodingKey,
+    EncodingKey,
+    Header,
+    Validation
+};
+
+use serde_json::Value;
 
 fn main() {
     let a = Claims {
