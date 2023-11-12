@@ -1,5 +1,5 @@
 pub mod sign;
-mod types;
+pub mod types;
 
 use crate::types::Claims;
 
