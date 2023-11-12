@@ -2,6 +2,15 @@
 name = "blutgang-jwt"
 version = "0.1.0"
 edition = "2021"
+authors = ["makemake <vukasin@gostovic.me>"]
+license = "3BSD"
+description = "Utility for signing blutgang compatible JWT token claims."
+readme = "README.md"
+homepage = "https://github.com/makemake-kbo/blutgang-jwt"
+repository = "https://github.com/makemake-kbo/blutgang-jwt"
+keywords = ["cli", "ethereum", "jwt", "blutgang"]
+categories = ["command-line-utilities"]
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
