@@ -1,8 +1,8 @@
-use serde_json::Value;
 use serde::{
     Deserialize,
-    Serialize
+    Serialize,
 };
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Claims {

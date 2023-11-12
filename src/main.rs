@@ -9,7 +9,7 @@ use jsonwebtoken::{
     DecodingKey,
     EncodingKey,
     Header,
-    Validation
+    Validation,
 };
 
 use serde_json::Value;

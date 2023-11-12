@@ -2,17 +2,17 @@ use crate::Claims;
 use std::error::Error;
 
 use jsonwebtoken::{
-	encode,
-	EncodingKey,
-	Header,
+    encode,
+    EncodingKey,
+    Header,
 };
 
-
-pub fn sign(
-	arg: Claims,
-	token: &str,
-) -> Result<String, SignError> {
-	Ok(encode(&Header::default(), &arg,  &EncodingKey::from_secret(token.as_bytes()))?)
+pub fn sign(arg: Claims, token: &str) -> Result<String, SignError> {
+    Ok(encode(
+        &Header::default(),
+        &arg,
+        &EncodingKey::from_secret(token.as_bytes()),
+    )?)
 }
 
 // Errors
@@ -38,4 +38,3 @@ impl From<jsonwebtoken::errors::Error> for SignError {
         SignError::SignFailed(error.to_string())
     }
 }
-
